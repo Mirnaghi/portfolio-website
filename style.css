@@ -31,7 +31,7 @@
         --fs-h2: 3.25rem;
         --fs-h3: 2.5rem;
         --fs-h4: 1.5rem;
-        --fs-p: 1.8rem;
+        --fs-p: 1.25rem;
     }
 }
 
@@ -221,4 +221,60 @@ h4 { font-size: var(--fs-h4);}
     .service {
         margin-left: 1em;
     }
+}
+
+
+/********************
+ * about me section *
+ ********************/
+.about-me {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.section__subtitle-about {
+    background-color: var(--color-secondary);
+}
+
+@media (min-width: 600px){
+    .about-me {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 1fr 250px;
+        grid-column-gap: 2em;
+        grid-template-areas: 
+            "t  a-img"
+            "st a-img"
+            "a  a-img";
+    }
+
+    .section__title-about {
+        grid-area: t;
+        grid-column: 1;
+    }
+
+    .section__subtitle-about {
+        grid-area: st;
+        grid-column: 1 / -1;
+        grid-row: 2;
+        position: relative;
+        left: -2em;
+        right: calc(100% + 6em);
+        padding-left: 2em;
+        padding-left: calc(200px + 3em);
+    }
+
+    .about__body {
+        grid-area: a;
+        grid-column: 1;
+    }
+
+    .about__img {
+        grid-area: a-img;
+        grid-row: 1 / -1;
+        height: 350px;
+        box-shadow: var(--bs);
+    }
+
+    
 }
