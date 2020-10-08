@@ -31,7 +31,7 @@
         --fs-h2: 3.25rem;
         --fs-h3: 2.5rem;
         --fs-h4: 1.5rem;
-        --fs-p: 1.25rem;
+        --fs-p: 1.45rem;
     }
 }
 
@@ -254,14 +254,14 @@ h4 { font-size: var(--fs-h4);}
     }
 
     .section__subtitle-about {
-        grid-area: st;
+        /* grid-area: st; */
         grid-column: 1 / -1;
         grid-row: 2;
         position: relative;
         left: -2em;
-        right: calc(100% + 6em);
+        width: calc(100% + 4em);
         padding-left: 2em;
-        padding-left: calc(200px + 3em);
+        padding-right: calc(200px + 4em);
     }
 
     .about__body {
@@ -274,6 +274,7 @@ h4 { font-size: var(--fs-h4);}
         grid-row: 1 / -1;
         height: 350px;
         box-shadow: var(--bs);
+        z-index: 1;
     }
 
     
